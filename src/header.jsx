@@ -23,13 +23,14 @@ export default function ({ handleFilter }) {
       <input
         type="text"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => {setText(e.target.value); 
+        handleFilter(e.target.value)}}
         className="logo"
         placeholder="Search.."
       />
-      <button onClick={() => handleFilter(text)} class="submit">
+      {/*<button onClick={() => handleFilter(text)} class="submit">
         Submit
-      </button>
+      </button>*/}
       <div class="header-right">
         <Link to="/">
           <a

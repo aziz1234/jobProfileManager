@@ -64,4 +64,7 @@ input[type="text"] {
   .header-right {
     float: none;
   }
+  input[type="text"] {
+    float: none;
+  }
 }

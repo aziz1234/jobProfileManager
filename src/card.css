@@ -27,3 +27,14 @@
 .container {
   padding: 2px 16px;
 }
+
+@media screen and (max-width: 500px) {
+  .grid {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-gap: 40px;
+    grid-template-columns: 250px;
+    padding-top: 25px;
+  }
+}

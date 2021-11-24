@@ -7,8 +7,12 @@ export const Card = ({ profiles, filter }) => {
   useEffect(() => {
     if (profiles.length) {
       if (filter !== "") {
-        let profile = profiles.find((profile) => profile.name === filter);
-        if (profile) setFilteredProfiles([profile]);
+        let profile = profiles.filter((profile) => {
+          let prof = profile.name.toUpperCase();
+          if(prof.includes(filter.toUpperCase()))
+            return profile
+          });
+        if (profile) setFilteredProfiles(profile);
         else setFilteredProfiles([]);
       } else setFilteredProfiles(profiles);
     }
